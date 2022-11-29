@@ -1,0 +1,26 @@
+@use "sass:color";
+
+.footer{
+    padding: 1rem;
+    &--nav{
+        ul{
+            gap: 1rem;
+            li{
+                a{
+                    svg{
+                        width: 1.2rem;
+                        height: 1.2rem;
+                        color: $bs-white-color;
+                        transition: .3s;
+                        &:hover{
+                            color: $logo-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        padding: 2rem;     
+    }
+}

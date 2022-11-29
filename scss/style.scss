@@ -1,0 +1,19 @@
+@import "./page/custom";
+@import "./page/mixin";
+@import "./page/variables";
+@import "./page/header";
+@import "./page/main";
+@import "./page/footer";
+
+.reset-link{
+    @include reset-links-style;
+}
+
+.container-fluid{
+    --bs-gutter-x: 0;
+}
+
+.page-container{
+    height: auto;
+    min-height: 100vh;
+}

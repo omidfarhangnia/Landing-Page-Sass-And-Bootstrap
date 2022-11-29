@@ -1,0 +1,138 @@
+%font-Mukta--color-white{
+    font-family: $Mukta-font;
+    color: $bs-white-color;
+}
+
+.cycle_section{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    .carousel-header{
+        width: 100%;
+        &--h5{
+            font-size: 1rem;
+            @extend %font-Mukta--color-white;
+        }
+        &--h1{
+            margin: .5rem 0;
+            font-size: 2.3rem;
+            @extend %font-Mukta--color-white;
+            span{
+                color: $logo-color;
+            }
+        }
+        &--prag{
+            font-size: .9rem;
+            text-align: justify;
+            margin: 0 auto;
+            @extend %font-Mukta--color-white;
+            width: 90%;
+        }
+        &--colors{
+            gap: 2rem;
+            margin: 1.5rem 0;
+            div{
+                gap: .8rem;
+                button{
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    border-radius: 50%;
+                    @extend %font-Mukta--color-white;
+                    outline: 1px solid white;
+                    outline-offset: 2px;
+                }
+                .purple{
+                    background: purple;
+                    outline-color: purple;
+                }
+                .blue{
+                    background: blue;
+                    outline-color: blue;
+                }
+                .grey{
+                    background: gray;
+                    outline-color: gray;
+                }
+            }
+            span{
+                @extend %font-Mukta--color-white;
+            }
+        }
+        &--button{
+            margin-bottom: 2rem;
+            --bs-btn-font-size: 1rem;
+            --bs-btn-font-weight: 600;
+            --bs-btn-font-family: $Mukta-font;
+            --bs-btn-color: #ececec;
+            --bs-btn-padding-y: .5rem;
+            --bs-btn-padding-x: .8rem;
+            --bs-btn-border-width: 0;
+            background: linear-gradient(110deg, lighten($logo-color, 10%), $logo-color, #340766);
+            &:hover{
+                --bs-btn-color: #ececec;
+            }
+        }
+    }
+    .carousel-inner{
+        width: 80%;
+        max-height: 200px;
+        img{
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        .carousel-item{
+            padding: 0 10%;
+            position: relative;
+        }
+    }
+    @media (min-width: 768px) {
+        .carousel-header{
+            width: 50%;
+            &--h5{
+                font-size: 1.2rem;
+            }
+            &--h1{
+                margin: 1rem 0;
+                font-size: 4rem;
+            }
+            &--prag{
+                margin: 0;
+                font-size: 1rem;
+                max-width: 400px;
+            }
+            &--colors{
+                gap: 2rem;
+                margin: 1.5rem 0;
+                div{
+                    gap: .8rem;
+                    button{
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        outline: 3px solid white;
+                        outline-offset: 5px;
+                    }
+                }
+            }
+            &--button{
+                margin-bottom: 0;
+                --bs-btn-font-size: 1.3rem;
+                --bs-btn-padding-y: .8rem;
+                --bs-btn-padding-x: 1.1rem;
+            }
+        }    
+        .carousel-inner{
+            width: 50%;
+            height: 100%;
+            max-height: none;
+            img{
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
+            .carousel-item{
+                padding: 0 10%;
+            }
+        }
+    }
+}

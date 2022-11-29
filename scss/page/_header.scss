@@ -1,0 +1,83 @@
+// simple styles
+%nav-animation {
+    transition: .3s;
+    &:hover{
+        translate: 0 -10px;
+        opacity: .7;
+    }
+}
+
+.nav-bar{
+    padding: 1rem;
+}
+.nav-bar, .page_offcanvas{
+    width: 100%;
+    #logo{
+        a{
+            font-size: 1.5rem;
+            color: $bs-white-color;
+            .logo-B{
+                font-family: $Monoton-font;
+                color: $logo-color;
+                font-size: 2.5rem;
+                font-style: italic;
+            }
+        }
+    }
+    .links__ul{
+        gap: 3rem;
+        font-size: 1rem;
+        font-family: $Mukta-font;
+        font-weight: 600;
+        li{
+            .active{
+                border-bottom: 2px solid darken($color: $bs-white-color, $amount: 10%);
+            }
+        }
+        // i don't need any animation for current page
+        li:not(.current-page){
+            @extend %nav-animation;
+        }
+    }
+    .icons__ul{
+        gap: 1.5rem;
+        li{
+            @extend %nav-animation;
+            svg{
+                width: 1.5rem;
+                height: 1.5rem;
+                color: $bs-white-color;
+            }
+        }
+    }
+    .burger__menu{
+        width: 2rem;
+        height: 2rem;
+        .burger__menu--layers{
+            height: 5px;
+            width: 90%;
+            background: $bs-white-color;
+        }
+    }
+}
+
+.page_offcanvas{
+    background: rgba(255, 255, 255, 0.32);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.2px);
+    .offcanvas-header{
+        button{
+            font-size: 2rem;
+            color: $logo-color;
+            &:hover{
+                color: $logo-color;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-bar{
+        padding: 2rem;
+    }
+}

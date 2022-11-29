@@ -1,0 +1,9 @@
+@use "sass:selector";
+
+@mixin reset-links-style {
+    text-decoration: none;
+    color: #ffffff;
+    &:hover{
+        color: #ffffff;
+    }
+}
